@@ -9,9 +9,12 @@ The figure below show the physical hardware.
 <p align="center">
   <img src="images/cam.png" width="400">
 </p>
+<p align="center">
+  <em><b>Figure 1.</b> The device of the wireless signal scanning.</em>
+</p>
 
 ## Dataset
-The folder structure is described as below.
+The folder structure is described as below(The complete dataset will be released after the paper is published.).
 ```
 ${ROOT}
 |-- height/                  # Building height maps (numeric matrices, .json)
@@ -37,4 +40,40 @@ Data Description：
 -Spatial resolution: 1 m/pixel, therefore each modality is aligned at 256 × 256 pixels. 
 
 The samples of different data. 
+<p align="center">
+  <img src="images/dataset.png" width="400">
+</p>
+<p align="center">
+  <em><b>Figure 2.</b> Multi-modal dataset examples. From top to bottom, and from left to right:</em>
+</p>
+
+<p align="center">
+  (1) Building height (visualized) &nbsp;&nbsp;
+  (2) OSM (roads + buildings) &nbsp;&nbsp;
+  (3) TX coverage (ref_point) &nbsp;&nbsp;
+  (4) Sparse RSSI measurement (visualized) &nbsp;&nbsp;
+  (5) Satellite image
+</p>
+
+
+<p align="center">
+  <img src="images/signal.png" width="400">
+</p>
+<p align="center">
+  <em><b>Figure 3.</b> ity scale measured data. </em>
+</p>
+
+## Code
+The code contains the main multi-modal model.  This model is mainly based on CI propagation path loss model.
+``` 
+python MARS_model.py
+```
+
+The main code for the measurement device.
+```
+python MARS_model.py
+```
+
+
+
 
