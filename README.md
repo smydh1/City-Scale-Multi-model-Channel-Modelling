@@ -82,12 +82,12 @@ $$
 
 
 ``` 
-python MARS_model.py
+python model.py
 ```
 
 The main code for the measurement device.
 ```
-python MARS_model.py
+python pluto.py
 ```
 
 **Reference:** 
