@@ -64,7 +64,23 @@ The samples of different data.
 </p>
 
 ## Code
-The code contains the main multi-modal model.  This model is mainly based on CI propagation path loss model.
+The code contains the main multi-modal model.  ## CI Path Loss Model
+
+We adopt the Close-In (CI) free-space reference distance model. The path loss is expressed as:
+
+$$
+PL^{CI}(f,d)[dB] = FSPL(f,1m)[dB] + 10n\log_{10}(d) + \chi^{CI}_{\sigma}
+$$
+
+where $n$ is the path loss exponent (PLE), $d$ is the 3D TX-RX separation distance, and $\chi^{CI}_{\sigma}$ denotes shadow fading.
+
+The free-space path loss at 1 m is given by:
+
+$$
+FSPL(f,1m)[dB] = 20\log_{10}\left(\frac{4\pi f}{c}\right)
+$$
+
+
 ``` 
 python MARS_model.py
 ```
@@ -74,6 +90,8 @@ The main code for the measurement device.
 python MARS_model.py
 ```
 
+**Reference:** 
+[1] G. R. MacCartney, Junhong Zhang, Shuai Nie and T. S. Rappaport, "Path loss models for 5G millimeter wave propagation channels in urban microcells," 2013 IEEE Global Communications Conference (GLOBECOM), Atlanta, GA, 2013, pp. 3948-3953, doi: 10.1109/GLOCOM.2013.6831690.
 
 
 
