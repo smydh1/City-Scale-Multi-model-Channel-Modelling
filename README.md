@@ -7,7 +7,7 @@ The hardware setup integrates a Raspberry Pi as the main controller, an ADALM-Pl
 
 The figure below show the physical hardware.
 <p align="center">
-  <img src="assets/SDR.png" width="400">
+  <img src="assets/cam.png" width="400">
 </p>
 
 ## Dataset
